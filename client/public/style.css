@@ -1,0 +1,6 @@
+body{
+    margin: 40px 80px;
+    width: calc(100% - 160px);
+    background: whitesmoke;
+    height: 100%;
+}
