@@ -13,8 +13,10 @@ const methodOverRide = require('method-override')
 const GridfsStorage = require('multer-gridfs-storage')
 const crypto = require('crypto')
 const port = process.env.PORT || 8000
+const cors = require('cors')
 app.use(bodyParser.json()) //Body Parser MiddleWare
 app.use(express.json())
+app.use(cors())
 app.use(methodOverRide('_method'))
 // const conLink = 'mongodb://hamza1331:abc@1234@ds125372.mlab.com:25372/demo_dreamerz'
 const mongoURL ='mongodb://localhost:27017/muziq'
@@ -75,7 +77,11 @@ var storage = new GridfsStorage({
     res.json({file:req.file})
     // res.redirect('http://localhost:3000')
   })
-  
+  app.get('/filedata',(req,res)=>{
+    let isImage = fileData.contentType.includes('image')
+    fileData.isImage = isImage
+    return res.json(fileData)
+  })
   /*
    @route: /file/filename
    desc: get a file from database and render as image

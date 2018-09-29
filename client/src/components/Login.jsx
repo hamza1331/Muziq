@@ -30,7 +30,7 @@ class Login extends Component {
             email:this.state.logEmail,
             password:this.state.logPw
         }
-        await fetch('/api/accounts/signin', {
+        await fetch('http://localhost:8000/api/accounts/signin', {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -60,7 +60,7 @@ class Login extends Component {
                 lastName:this.state.lastName,
                 password:this.state.regPw
             }
-            await fetch('http://localhost:8080/api/accounts/signup', {
+            await fetch('http://localhost:8000/api/accounts/signup', {
                 method: 'POST',
                 headers: {
                   'Accept': 'application/json',

@@ -12,6 +12,7 @@
   "dependencies": {
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "gridfs-stream": "^1.1.1",
     "method-override": "^3.0.0",

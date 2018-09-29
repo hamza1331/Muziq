@@ -29,7 +29,7 @@ class Muziq extends Component {
             <nav className="navbar navbar-inverse navbar-fixed-top">
               <div className="container-fluid">
                 <div className="navbar-header">
-                  <a onClick={this.handleHomeLink} className="navbar-brand"><h3 style={{display:'inline'}}>Dreamerz Bookstore</h3></a>
+                  <a onClick={this.handleHomeLink} className="navbar-brand"><h3 style={{display:'inline',fontSize:30}}>MuZ!Q</h3></a>
                 </div>
                 <ul className="nav navbar-nav navbar-right">
                   {(this.props.isLoggedIn) && <button onClick={this.handleLogout} className="btn btn-danger navbar-btn">LOG OUT</button>}
